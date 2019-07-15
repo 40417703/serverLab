@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<head>
+		<!--Link the CSS and JavaScript file-->
+		<link rel="stylesheet" href="globalStylesheet.css">
+		<link rel="stylesheet" href="indexStylesheet.css">
+		<script src="indexScripts.js"></script>
+		<title id="title" >Notes</title>
+	</head>
+	<body class="index" onload="indexLoad()">
+		<header>
+			<h1>NOTES</h1>
+		</header>
+		<!--Creates a tab menu with two options for switching between the form for login and register-->
+		<div id="loginTabs" class="loginTab">
+			<button class="loginTabLinks" id="loginTabBtn" onclick="loginSwitchTab(event, 'Login')">Login</button>
+			<button class="loginTabLinks" onclick="loginSwitchTab(event, 'Register')">Register</button>
+			<button class="loginTabLinks" onclick="loginSwitchTab(event, 'Forgot')">Forgotten Password</button>
+			<button class="loginTabLinks" onclick="loginSwitchTab(event, 'Change')">Change Password</button>
+		</div>
+		<!--Form for logging in. Has two text boxes and a button that runs JS-->
+		<div id="Login" class="loginTabContent" onkeydown="enterButton(event, 'login')">
+			<input type="text" id="loginEmail" placeholder="Email" autofocus>
+			<input type="password" id="loginPassword" placeholder="Password">
+			<div class="controls">
+				<button id="loginBtn" onclick="login()">Login</button>
+			</div>
+		</div>
+		<!--Form for registering. Has three text boxes and a button that runs JS-->
+		<div id="Register" class="loginTabContent" onkeydown="enterButton(event, 'register')">
+			<input type="text" id="registerEmail" placeholder="Email">
+			<input type="password" id="registerPassword" placeholder="Password">
+			<input type="password" id="registerPasswordAgain" placeholder="Password Again">
+			<div class="controls">
+				<button id="registerBtn" onclick="register()">Register</button>
+			</div>
+		</div>
+		<!--Form for if the user has forgotted the password associated with their email-->
+		<div id="Forgot" class="loginTabContent" onkeydown="enterButton(event, 'forgot')">
+			<input type="text" id="forgotEmail" placeholder="Email">
+			<div class="controls">
+				<button id="forgotBtn" onclick="forgot()">Email Reset</button>
+			</div>
+		</div>
+		<!-- Form for changing the password associated with an email address providing the current one is known-->
+		<div id="Change" class="loginTabContent" onkeydown="enterButton(event, 'change')">
+			<input type="text" id="changeEmail" placeholder="Email">
+			<input type="password" id="changeCurrentPassword" placeholder="Current Password">
+			<input type="password" id="changeNewPassword" placeholder="New Password">
+			<input type="password" id="changeNewPasswordAgain" placeholder="New Password Again">
+			<div class="controls">
+				<button id="changeBtn" onclick="change()">Change Password</button>
+			</div>
+		</div>
+		
+		<!--Modal box for any messages-->
+		<div id="indexModal" class="indexModal">
+			<div class="indexModalContent">
+				<p id="registrationText"></p>
+			</div>
+		</div>	
+	</body>
+</html>
