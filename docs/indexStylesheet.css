@@ -1,0 +1,84 @@
+/*
+Styles for the modal boxes
+*/
+
+.indexModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.indexModalContent {
+  background-color: #f1f1f1;
+  margin: 40% auto;
+  border: 1px solid #888;
+  width: 40%;
+  border-style: outset;
+}
+
+.index  {
+	text-align: center;
+}
+
+/*
+Styles for the tab bars on the two pages
+*/
+
+.loginTab {
+	margin-left: 25%;
+	margin-right: 25%;
+	overflow: hidden;
+	border: 1px solid #ccc;
+	background-color: #f1f1f1;
+}
+
+/*
+Styles for the tab contents on the two pages
+*/
+
+.loginTabContent {
+	background-color: #ccc;
+	margin-left: 25%;
+	margin-right: 25%;
+	display: none;
+	padding: 6px 3%;
+	border: outset #ccc;
+	border-top: solid #ccc;
+}
+
+/*
+Styles for the buttons on the two pages. These use inheritance, so all buttons use the same padding etc
+*/
+
+.loginTab button {
+	background-color: inherit;
+	float: center;
+	border: none;
+	outline: none;
+	border-top-right-radius: 15px;
+	border-top-left-radius: 15px;	
+}
+
+/*
+Styles for button hovering, once again using inheritance
+*/
+
+.loginTab button:hover {
+	border-bottom: none;
+}
+
+/*
+Styles for the pressed buttons
+*/
+
+button.active {
+	background-color: #ccc;
+	border-style: outset;
+	border-bottom: none;
+}
