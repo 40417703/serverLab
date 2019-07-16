@@ -1,0 +1,80 @@
+/*
+The following styles are for general elements across both pages
+*/
+
+body {
+	background-color: Black;
+}
+
+input {
+	width: 100%;
+}
+
+h1 {
+	font-size: 10vw;
+	color: #f1f1f1;
+}
+
+select {
+	margin-left: 2px;
+}
+
+label {
+	margin-left: 10px;
+}
+
+p {
+	font-size: 22px;
+}
+
+li {
+	font-size: 20px;
+}
+
+/*
+The following are class specific styles for h1 in the notes pages and input boxes in control divs
+*/
+
+.controls input {
+	width: 5%;
+}
+
+/*
+Styles for the buttons on the two pages. These use inheritance, so all buttons use the same padding etc
+*/
+
+button {
+	cursor: pointer;
+	padding: 14px 16px;	
+}
+
+.controls button {
+	background-color: #f1f1f1;	
+	padding: 11px 13px;
+}
+
+/*
+Styles for button hovering, once again using inheritance
+*/
+
+button:hover {
+	background-color: #ddd;
+	border-bottom: solid #ddd;
+}
+
+.controls button:hover {
+	background-color: Blue;
+	color: White;
+}
+
+/*
+Styles for the pressed buttons
+*/
+
+button.active {
+	background-color: #ccc;
+	border-style: outset;
+	border-bottom: none;
+}
+
+
