@@ -68,3 +68,13 @@ Id specific styles
 	background-color: Blue;
 	color: White;
 }
+
+/*
+Styles for the pressed buttons
+*/
+
+button.active {
+	background-color: #ccc;
+	border-style: outset;
+	border-bottom: none;
+}
